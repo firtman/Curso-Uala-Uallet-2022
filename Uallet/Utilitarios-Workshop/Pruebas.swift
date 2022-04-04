@@ -35,7 +35,7 @@ struct Product {
 }
 
 struct B {
-    
+    var x = 2
 }
 
 
