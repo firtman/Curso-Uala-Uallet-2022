@@ -7,5 +7,6 @@ target 'Uallet' do
 
   # Pods for Uallet
   pod 'Alamofire', '~> 5.5'
+  pod 'PromiseKit', '~> 6.8'
 
 end

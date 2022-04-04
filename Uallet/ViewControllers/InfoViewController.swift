@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import PromiseKit
 
 
 class InfoViewController: UIViewController {
@@ -23,10 +24,56 @@ class InfoViewController: UIViewController {
         leerCotizacion()
     }
     
+    
     func leerCotizacion() {
+        
+        lblCotizaciones.text = ""
+        activityLoading.startAnimating()
+
+        firstly {
+            when(fulfilled:
+                    APICotizaciones.bitcoinRatePromises(),
+                    APICotizaciones.dolarBlueRatePromises()
+            )
+        }
+        .done { rates in
+            // Se cumplen LAS DOS promesas
+            self.lblCotizaciones.text =
+            """
+            1 BTC = \(rates.0) USD
+            1 USD = \(rates.1) ARS
+            """
+        }
+        .catch { error in
+            self.lblCotizaciones.text = "Error 😬"
+        }
+        .finally {
+            self.activityLoading.stopAnimating()
+        }
+        
+        
+        
+//        APICotizaciones.bitcoinRatePromises()
+//            .done { rate in
+//                // Se cumplió
+//
+//            }
+//            .catch { error in
+//                // No se cumplió
+//
+//            }
+//
+
+        
+    
+    }
+    
+    func leerCotizacionSinPromises() {
         lblCotizaciones.text = ""
         activityLoading.startAnimating()
         
+        
+        // APIs en secuencia
         APICotizaciones.dolarBlueRate { ok, rateUSD in
             APICotizaciones.bitcoinRate { ok, rateBTC in
                 self.activityLoading.stopAnimating()
@@ -41,36 +88,30 @@ class InfoViewController: UIViewController {
                     self.lblCotizaciones.text = "Error 😬"
                 }
             }
-            
         }
-        
-        
-        
-       
-       
     }
     
-    func leerCotizacionAMano() {
-        AF.request("https://api.coindesk.com/v1/bpi/currentprice.json").responseJSON { http in
-            if let body = http.value {
-                if let json = body as? [String: Any] {
-                    let disclaimer = json["disclaimer"] as! String
-                    debugPrint(disclaimer)
-//              as? = aceptás que no se pueda castear y que sea nulo
-//              as! = solo aceptamos que existe y se puede caster
-                    let bpi = json["bpi"] as! [String: Any]
-                    let usd = bpi["USD"] as! [String: Any]
-                    let rate = usd["rate_float"] as! Double
-                    print("El bitcoin vale $\(rate)")
-                    
-                }
-                
-            } else {
-                print("No hay body")
-            }
-        }
-        
-    }
+//    func leerCotizacionAMano() {
+//        AF.request("https://api.coindesk.com/v1/bpi/currentprice.json").responseJSON { http in
+//            if let body = http.value {
+//                if let json = body as? [String: Any] {
+//                    let disclaimer = json["disclaimer"] as! String
+//                    debugPrint(disclaimer)
+////              as? = aceptás que no se pueda castear y que sea nulo
+////              as! = solo aceptamos que existe y se puede caster
+//                    let bpi = json["bpi"] as! [String: Any]
+//                    let usd = bpi["USD"] as! [String: Any]
+//                    let rate = usd["rate_float"] as! Double
+//                    print("El bitcoin vale $\(rate)")
+//                    
+//                }
+//                
+//            } else {
+//                print("No hay body")
+//            }
+//        }
+//        
+//    }
 
 
 }

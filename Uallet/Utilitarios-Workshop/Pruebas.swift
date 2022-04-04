@@ -1,6 +1,14 @@
 import Foundation
 
 
+extension String {
+    func estaVacio() -> Bool {
+        return self.count == 0
+    }
+}
+
+
+
 typealias Entero = Int
 
 var v1 = 1
@@ -14,6 +22,7 @@ class Customer {
     init(id: Int, name: String) {
         self.id = id
         self.name = name
+        name.estaVacio()
     }
     
     var id: Int

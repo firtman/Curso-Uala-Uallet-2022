@@ -23,6 +23,7 @@
 		C9DD3C3A27FB214C00E06571 /* Pruebas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C3927FB214C00E06571 /* Pruebas.swift */; };
 		C9DD3C3C27FB399600E06571 /* APICotizaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C3B27FB399600E06571 /* APICotizaciones.swift */; };
 		C9DD3C3F27FB3CE200E06571 /* APIDolarStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C3E27FB3CE200E06571 /* APIDolarStructs.swift */; };
+		C9DD3C4127FB407300E06571 /* APICotizacionesPromises.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C4027FB407300E06571 /* APICotizacionesPromises.swift */; };
 		C9FE8A5627F1E78F00228517 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE8A5527F1E78F00228517 /* AppDelegate.swift */; };
 		C9FE8A5827F1E78F00228517 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE8A5727F1E78F00228517 /* SceneDelegate.swift */; };
 		C9FE8A5A27F1E78F00228517 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE8A5927F1E78F00228517 /* LoginViewController.swift */; };
@@ -54,6 +55,7 @@
 		C9DD3C3927FB214C00E06571 /* Pruebas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pruebas.swift; sourceTree = "<group>"; };
 		C9DD3C3B27FB399600E06571 /* APICotizaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICotizaciones.swift; sourceTree = "<group>"; };
 		C9DD3C3E27FB3CE200E06571 /* APIDolarStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDolarStructs.swift; sourceTree = "<group>"; };
+		C9DD3C4027FB407300E06571 /* APICotizacionesPromises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICotizacionesPromises.swift; sourceTree = "<group>"; };
 		C9FE8A5227F1E78F00228517 /* Uallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FE8A5527F1E78F00228517 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9FE8A5727F1E78F00228517 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				C904AC3227F750A80040B160 /* APIBitcoinStructs.swift */,
 				C9DD3C3E27FB3CE200E06571 /* APIDolarStructs.swift */,
 				C9DD3C3B27FB399600E06571 /* APICotizaciones.swift */,
+				C9DD3C4027FB407300E06571 /* APICotizacionesPromises.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				C936A54827F4A28000AEB172 /* WalletsViewController.swift in Sources */,
 				C9DD3C3A27FB214C00E06571 /* Pruebas.swift in Sources */,
 				C936A54427F4A26C00AEB172 /* DashboardViewController.swift in Sources */,
+				C9DD3C4127FB407300E06571 /* APICotizacionesPromises.swift in Sources */,
 				C9DD3C3F27FB3CE200E06571 /* APIDolarStructs.swift in Sources */,
 				C9FE8A5A27F1E78F00228517 /* LoginViewController.swift in Sources */,
 				C936A54C27F4A29800AEB172 /* InfoViewController.swift in Sources */,
