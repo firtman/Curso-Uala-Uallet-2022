@@ -11,24 +11,43 @@ import Alamofire
 
 class InfoViewController: UIViewController {
 
+    @IBOutlet weak var activityLoading: UIActivityIndicatorView!
+    @IBOutlet weak var lblCotizaciones: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         leerCotizacion()
     }
     
+    @IBAction func refresh(_ sender: Any) {
+        leerCotizacion()
+    }
+    
     func leerCotizacion() {
-        AF.request("http://api.coindesk.com/v1/bpi/currentprice.json")
-            .responseDecodable(of: APIDolarRespuesta.self) {
-            response in
-            
-                if let value = response.value {
-                    let rate = value.bpi.usd.rateFloat
-                    print("El bitcoin vale $\(rate)")
+        lblCotizaciones.text = ""
+        activityLoading.startAnimating()
+        
+        APICotizaciones.dolarBlueRate { ok, rateUSD in
+            APICotizaciones.bitcoinRate { ok, rateBTC in
+                self.activityLoading.stopAnimating()
+                if (ok) {
+                    self.lblCotizaciones.text =
+                        """
+                            1 BTC = \(rateBTC!) USD
+                            1 USD = \(rateUSD!) ARS
+                        """
+                    
                 } else {
-                    print("Hubo un error")
+                    self.lblCotizaciones.text = "Error 😬"
                 }
-                
+            }
+            
         }
+        
+        
+        
+       
+       
     }
     
     func leerCotizacionAMano() {

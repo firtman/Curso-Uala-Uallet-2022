@@ -1,7 +1,7 @@
 import Foundation
 
 // MARK: - Welcome
-struct APIDolarRespuesta: Codable {
+struct APIBitcoinResponse: Codable {
     let time: Time
     let disclaimer, chartName: String
     let bpi: Bpi

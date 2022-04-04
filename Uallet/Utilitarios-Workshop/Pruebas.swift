@@ -10,8 +10,6 @@ func f() {
     
 }
 
-
-
 class Customer {
     init(id: Int, name: String) {
         self.id = id

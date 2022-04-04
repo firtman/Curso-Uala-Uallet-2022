@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6C4B8B70F813FBCA302173FF /* Pods_Uallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3489D2C8E1B1C79E4C96A319 /* Pods_Uallet.framework */; };
 		C904AC3127F731CE0040B160 /* ManejoErrores.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904AC3027F731CE0040B160 /* ManejoErrores.swift */; };
-		C904AC3327F750A80040B160 /* APIDolarStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904AC3227F750A80040B160 /* APIDolarStructs.swift */; };
+		C904AC3327F750A80040B160 /* APIBitcoinStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C904AC3227F750A80040B160 /* APIBitcoinStructs.swift */; };
 		C936A54427F4A26C00AEB172 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C936A54227F4A26C00AEB172 /* DashboardViewController.swift */; };
 		C936A54527F4A26C00AEB172 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C936A54327F4A26C00AEB172 /* DashboardViewController.xib */; };
 		C936A54827F4A28000AEB172 /* WalletsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C936A54627F4A27F00AEB172 /* WalletsViewController.swift */; };
@@ -21,6 +21,8 @@
 		C936A55627F5DF8600AEB172 /* WalletAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C936A55427F5DF8600AEB172 /* WalletAddViewController.xib */; };
 		C996008027F359A400857875 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C996007F27F359A400857875 /* Storage.swift */; };
 		C9DD3C3A27FB214C00E06571 /* Pruebas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C3927FB214C00E06571 /* Pruebas.swift */; };
+		C9DD3C3C27FB399600E06571 /* APICotizaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C3B27FB399600E06571 /* APICotizaciones.swift */; };
+		C9DD3C3F27FB3CE200E06571 /* APIDolarStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C3E27FB3CE200E06571 /* APIDolarStructs.swift */; };
 		C9FE8A5627F1E78F00228517 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE8A5527F1E78F00228517 /* AppDelegate.swift */; };
 		C9FE8A5827F1E78F00228517 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE8A5727F1E78F00228517 /* SceneDelegate.swift */; };
 		C9FE8A5A27F1E78F00228517 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE8A5927F1E78F00228517 /* LoginViewController.swift */; };
@@ -38,7 +40,7 @@
 		6B07439A0650C6021110AFAA /* Pods-Uallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uallet.release.xcconfig"; path = "Target Support Files/Pods-Uallet/Pods-Uallet.release.xcconfig"; sourceTree = "<group>"; };
 		B267DAA6F1FBA837FF068999 /* Pods-Uallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uallet.debug.xcconfig"; path = "Target Support Files/Pods-Uallet/Pods-Uallet.debug.xcconfig"; sourceTree = "<group>"; };
 		C904AC3027F731CE0040B160 /* ManejoErrores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManejoErrores.swift; sourceTree = "<group>"; };
-		C904AC3227F750A80040B160 /* APIDolarStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDolarStructs.swift; sourceTree = "<group>"; };
+		C904AC3227F750A80040B160 /* APIBitcoinStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBitcoinStructs.swift; sourceTree = "<group>"; };
 		C936A54227F4A26C00AEB172 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		C936A54327F4A26C00AEB172 /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		C936A54627F4A27F00AEB172 /* WalletsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,8 @@
 		C936A55427F5DF8600AEB172 /* WalletAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletAddViewController.xib; sourceTree = "<group>"; };
 		C996007F27F359A400857875 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		C9DD3C3927FB214C00E06571 /* Pruebas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pruebas.swift; sourceTree = "<group>"; };
+		C9DD3C3B27FB399600E06571 /* APICotizaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICotizaciones.swift; sourceTree = "<group>"; };
+		C9DD3C3E27FB3CE200E06571 /* APIDolarStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDolarStructs.swift; sourceTree = "<group>"; };
 		C9FE8A5227F1E78F00228517 /* Uallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FE8A5527F1E78F00228517 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9FE8A5727F1E78F00228517 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,9 +124,19 @@
 				C936A55427F5DF8600AEB172 /* WalletAddViewController.xib */,
 				C936A54A27F4A29800AEB172 /* InfoViewController.swift */,
 				C936A54B27F4A29800AEB172 /* InfoViewController.xib */,
-				C904AC3227F750A80040B160 /* APIDolarStructs.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C9DD3C3D27FB39A100E06571 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				C9FE8A6B27F340AA00228517 /* API.swift */,
+				C904AC3227F750A80040B160 /* APIBitcoinStructs.swift */,
+				C9DD3C3E27FB3CE200E06571 /* APIDolarStructs.swift */,
+				C9DD3C3B27FB399600E06571 /* APICotizaciones.swift */,
+			);
+			path = APIs;
 			sourceTree = "<group>";
 		};
 		C9FE8A4927F1E78F00228517 = {
@@ -153,7 +167,7 @@
 				C936A54E27F4A2AB00AEB172 /* ViewControllers */,
 				C9FE8A6027F1E79000228517 /* LaunchScreen.storyboard */,
 				C9FE8A6327F1E79000228517 /* Info.plist */,
-				C9FE8A6B27F340AA00228517 /* API.swift */,
+				C9DD3C3D27FB39A100E06571 /* APIs */,
 			);
 			path = Uallet;
 			sourceTree = "<group>";
@@ -291,15 +305,17 @@
 				C936A54827F4A28000AEB172 /* WalletsViewController.swift in Sources */,
 				C9DD3C3A27FB214C00E06571 /* Pruebas.swift in Sources */,
 				C936A54427F4A26C00AEB172 /* DashboardViewController.swift in Sources */,
+				C9DD3C3F27FB3CE200E06571 /* APIDolarStructs.swift in Sources */,
 				C9FE8A5A27F1E78F00228517 /* LoginViewController.swift in Sources */,
 				C936A54C27F4A29800AEB172 /* InfoViewController.swift in Sources */,
-				C904AC3327F750A80040B160 /* APIDolarStructs.swift in Sources */,
+				C904AC3327F750A80040B160 /* APIBitcoinStructs.swift in Sources */,
 				C936A55027F4A3C300AEB172 /* MainTabViewController.swift in Sources */,
 				C904AC3127F731CE0040B160 /* ManejoErrores.swift in Sources */,
 				C936A55527F5DF8600AEB172 /* WalletAddViewController.swift in Sources */,
 				C9FE8A5627F1E78F00228517 /* AppDelegate.swift in Sources */,
 				C9FE8A6C27F340AA00228517 /* API.swift in Sources */,
 				C9FE8A5827F1E78F00228517 /* SceneDelegate.swift in Sources */,
+				C9DD3C3C27FB399600E06571 /* APICotizaciones.swift in Sources */,
 				C996008027F359A400857875 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
