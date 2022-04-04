@@ -45,12 +45,12 @@ func agregarDescripcion( _ c: Customer)  {
 
 func pruebaStructs() {
     
-    var product1 = Product(id: 2, name: "Coca Cola", price: 100)
-
-    var customer1 = Customer(id: 3, name: "A") // descripcion = nil
-    agregarDescripcion(customer1)
-    print(customer1.description ?? "sin descripcion") // descripcion = nil o "A. ID=3"
-    
+//    var product1 = Product(id: 2, name: "Coca Cola", price: 100)
+//
+//    var customer1 = Customer(id: 3, name: "A") // descripcion = nil
+//    agregarDescripcion(customer1)
+//    print(customer1.description ?? "sin descripcion") // descripcion = nil o "A. ID=3"
+//
 }
 
 protocol P {
