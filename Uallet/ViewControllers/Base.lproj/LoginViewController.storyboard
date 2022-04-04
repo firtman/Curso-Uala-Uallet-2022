@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20017"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Uallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WeK-WL-S9F" userLabel="StackContenedor">
+                                <rect key="frame" x="59" y="237" width="296" height="134"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Eyw-Cz-e32" userLabel="StackUsuario">
+                                        <rect key="frame" x="29.5" y="0.0" width="266.5" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FK-aY-6Vw">
+                                                <rect key="frame" x="0.0" y="0.0" width="58.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4q-jb-BBt">
+                                                <rect key="frame" x="66.5" y="0.0" width="200" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="nar-ND-E7X"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="go" textContentType="username"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NYS-Cy-owi"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SZM-5e-Ew1" userLabel="StackContrasenia">
+                                        <rect key="frame" x="0.0" y="50" width="296" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwd-FA-nXc">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Re9-F1-GVq">
+                                                <rect key="frame" x="96" y="0.0" width="200" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="x7b-Vk-XsA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="95s-Yu-0cO"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muW-sr-v7j">
+                                        <rect key="frame" x="232.5" y="100" width="63.5" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Log In">
+                                            <color key="baseForegroundColor" name="ColorBotonFrente"/>
+                                            <color key="baseBackgroundColor" name="ColorBotonFondo"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R65-Ah-M6S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pi-Ij-SFk" userLabel="View Fondo Logo">
+                                <rect key="frame" x="57" y="74" width="300" height="128"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logouala.png" translatesAutoresizingMaskIntoConstraints="NO" id="VnF-z1-xgK">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="128"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VnF-z1-xgK" secondAttribute="bottom" id="DXr-aq-y75"/>
+                                    <constraint firstAttribute="trailing" secondItem="VnF-z1-xgK" secondAttribute="trailing" id="LgW-hm-aCW"/>
+                                    <constraint firstItem="VnF-z1-xgK" firstAttribute="leading" secondItem="7pi-Ij-SFk" secondAttribute="leading" id="MPg-ca-Oyw"/>
+                                    <constraint firstAttribute="height" constant="128" id="YsY-2w-BaI"/>
+                                    <constraint firstAttribute="width" constant="300" id="eFD-Y8-gJF"/>
+                                    <constraint firstItem="VnF-z1-xgK" firstAttribute="top" secondItem="7pi-Ij-SFk" secondAttribute="top" id="jVz-II-euh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="ColorFondo"/>
+                        <color key="tintColor" red="0.92941176889999999" green="0.44313728810000003" blue="0.4196078479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="WeK-WL-S9F" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8Za-po-kfN"/>
+                            <constraint firstItem="7pi-Ij-SFk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="fbh-17-J2f"/>
+                            <constraint firstItem="7pi-Ij-SFk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l6I-tt-aLA"/>
+                            <constraint firstItem="WeK-WL-S9F" firstAttribute="top" secondItem="7pi-Ij-SFk" secondAttribute="bottom" constant="35" id="lqy-UJ-qRn"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="gMz-XG-09f" appends="YES" id="18q-mw-p5o"/>
+                            <outletCollection property="gestureRecognizers" destination="2b5-Ag-icz" appends="YES" id="Gi8-nb-tnT"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="txtContrasena" destination="Re9-F1-GVq" id="idC-Zu-H48"/>
+                        <outlet property="txtUsuario" destination="f4q-jb-BBt" id="oqP-Rq-Dbo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gMz-XG-09f">
+                    <connections>
+                        <action selector="tocoFondo:" destination="BYZ-38-t0r" id="jWI-Pc-aGF"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTouchesRequired="2" id="2b5-Ag-icz">
+                    <connections>
+                        <action selector="dobleTapLogo:" destination="BYZ-38-t0r" id="5pP-5L-9HT"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logouala.png" width="1428" height="737"/>
+        <namedColor name="ColorBotonFondo">
+            <color red="0.92941176889999999" green="0.44313728810000003" blue="0.4196078479" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="ColorBotonFrente">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="ColorFondo">
+            <color red="0.6433512774028608" green="0.74014258048822668" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
