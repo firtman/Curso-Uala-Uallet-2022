@@ -20,8 +20,15 @@ class InfoViewController: UIViewController {
         leerCotizacion()
     }
     
+    
     @IBAction func refresh(_ sender: Any) {
         leerCotizacion()
+    }
+    
+    func constanteMultiplicacion() -> Promise<Double> {
+        return Promise { resolver in
+            resolver.fulfill(1)
+        }
     }
     
     
@@ -33,15 +40,16 @@ class InfoViewController: UIViewController {
         firstly {
             when(fulfilled:
                     APICotizaciones.bitcoinRatePromises(),
-                    APICotizaciones.dolarBlueRatePromises()
+                    APICotizaciones.dolarBlueRatePromises(),
+                    constanteMultiplicacion()
             )
         }
-        .done { rates in
+        .done { cotizaciones in
             // Se cumplen LAS DOS promesas
             self.lblCotizaciones.text =
             """
-            1 BTC = \(rates.0) USD
-            1 USD = \(rates.1) ARS
+            1 BTC = \(cotizaciones.0) USD
+            1 USD = \(cotizaciones.1.compra) ARS
             """
         }
         .catch { error in

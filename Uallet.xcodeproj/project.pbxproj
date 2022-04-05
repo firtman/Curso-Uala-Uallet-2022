@@ -24,6 +24,10 @@
 		C9DD3C3C27FB399600E06571 /* APICotizaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C3B27FB399600E06571 /* APICotizaciones.swift */; };
 		C9DD3C3F27FB3CE200E06571 /* APIDolarStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C3E27FB3CE200E06571 /* APIDolarStructs.swift */; };
 		C9DD3C4127FB407300E06571 /* APICotizacionesPromises.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C4027FB407300E06571 /* APICotizacionesPromises.swift */; };
+		C9DD3C4427FC713D00E06571 /* DolarRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C4327FC713D00E06571 /* DolarRate.swift */; };
+		C9DD3C4627FC779A00E06571 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C4527FC779A00E06571 /* Wallet.swift */; };
+		C9DD3C4827FC781100E06571 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C4727FC781100E06571 /* Currency.swift */; };
+		C9DD3C4A27FC793900E06571 /* WalletsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C4927FC793900E06571 /* WalletsStorage.swift */; };
 		C9FE8A5627F1E78F00228517 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE8A5527F1E78F00228517 /* AppDelegate.swift */; };
 		C9FE8A5827F1E78F00228517 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE8A5727F1E78F00228517 /* SceneDelegate.swift */; };
 		C9FE8A5A27F1E78F00228517 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE8A5927F1E78F00228517 /* LoginViewController.swift */; };
@@ -56,6 +60,10 @@
 		C9DD3C3B27FB399600E06571 /* APICotizaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICotizaciones.swift; sourceTree = "<group>"; };
 		C9DD3C3E27FB3CE200E06571 /* APIDolarStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDolarStructs.swift; sourceTree = "<group>"; };
 		C9DD3C4027FB407300E06571 /* APICotizacionesPromises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICotizacionesPromises.swift; sourceTree = "<group>"; };
+		C9DD3C4327FC713D00E06571 /* DolarRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolarRate.swift; sourceTree = "<group>"; };
+		C9DD3C4527FC779A00E06571 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		C9DD3C4727FC781100E06571 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		C9DD3C4927FC793900E06571 /* WalletsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsStorage.swift; sourceTree = "<group>"; };
 		C9FE8A5227F1E78F00228517 /* Uallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FE8A5527F1E78F00228517 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9FE8A5727F1E78F00228517 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +150,17 @@
 			path = APIs;
 			sourceTree = "<group>";
 		};
+		C9DD3C4227FC712200E06571 /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				C9DD3C4327FC713D00E06571 /* DolarRate.swift */,
+				C9DD3C4527FC779A00E06571 /* Wallet.swift */,
+				C9DD3C4727FC781100E06571 /* Currency.swift */,
+				C9DD3C4927FC793900E06571 /* WalletsStorage.swift */,
+			);
+			path = Modelo;
+			sourceTree = "<group>";
+		};
 		C9FE8A4927F1E78F00228517 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +182,7 @@
 		C9FE8A5427F1E78F00228517 /* Uallet */ = {
 			isa = PBXGroup;
 			children = (
+				C9DD3C4227FC712200E06571 /* Modelo */,
 				C936A54127F4986000AEB172 /* Recursos */,
 				C936A54027F4984F00AEB172 /* Utilitarios-Workshop */,
 				C9FE8A5527F1E78F00228517 /* AppDelegate.swift */,
@@ -310,14 +330,18 @@
 				C936A54427F4A26C00AEB172 /* DashboardViewController.swift in Sources */,
 				C9DD3C4127FB407300E06571 /* APICotizacionesPromises.swift in Sources */,
 				C9DD3C3F27FB3CE200E06571 /* APIDolarStructs.swift in Sources */,
+				C9DD3C4627FC779A00E06571 /* Wallet.swift in Sources */,
 				C9FE8A5A27F1E78F00228517 /* LoginViewController.swift in Sources */,
 				C936A54C27F4A29800AEB172 /* InfoViewController.swift in Sources */,
+				C9DD3C4427FC713D00E06571 /* DolarRate.swift in Sources */,
 				C904AC3327F750A80040B160 /* APIBitcoinStructs.swift in Sources */,
 				C936A55027F4A3C300AEB172 /* MainTabViewController.swift in Sources */,
 				C904AC3127F731CE0040B160 /* ManejoErrores.swift in Sources */,
 				C936A55527F5DF8600AEB172 /* WalletAddViewController.swift in Sources */,
 				C9FE8A5627F1E78F00228517 /* AppDelegate.swift in Sources */,
+				C9DD3C4A27FC793900E06571 /* WalletsStorage.swift in Sources */,
 				C9FE8A6C27F340AA00228517 /* API.swift in Sources */,
+				C9DD3C4827FC781100E06571 /* Currency.swift in Sources */,
 				C9FE8A5827F1E78F00228517 /* SceneDelegate.swift in Sources */,
 				C9DD3C3C27FB399600E06571 /* APICotizaciones.swift in Sources */,
 				C996008027F359A400857875 /* Storage.swift in Sources */,

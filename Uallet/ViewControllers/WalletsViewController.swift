@@ -8,34 +8,35 @@
 import UIKit
 
 
-class WalletsViewController: UIViewController {
-
+class WalletsViewController: UITableViewController {
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Wallets"
-
+        
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addWallet))
-                        
-        // Do any additional setup after loading the view.
     }
 
     @objc func addWallet() {
         let addVC = WalletAddViewController()
-//        addVC.modalTransitionStyle = .crossDissolve
-//        addVC.modalPresentationStyle = .fullScreen
         present(UINavigationController(rootViewController: addVC), animated: true)
         
                 
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    fileprivate func crearElementosManual() {
+        let stack = UIStackView(frame: CGRect(x: 15, y: 80, width: 300, height: 300))
+        stack.axis = .vertical
+        self.view.addSubview(stack)
+        
+        for wallet in WalletsStorage.shared.wallets {
+            let label = UILabel()
+            label.text = wallet.name
+            stack.addSubview(label)
+        }
     }
-    */
-
+    
 }
