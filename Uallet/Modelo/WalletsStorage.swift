@@ -21,6 +21,10 @@ class WalletsStorage {
         wallets.append(Wallet(name: "Belo", balance: 0.0004, currency: .Bitcoin))
     }
     
+
+    func add(wallet: Wallet) {
+        wallets.append(wallet)
+    }
     
     
 }

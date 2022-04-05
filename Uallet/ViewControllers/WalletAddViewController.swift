@@ -8,7 +8,13 @@
 import UIKit
 
 class WalletAddViewController: UIViewController {
-
+    
+    var callback: ((Bool) -> Void)?
+    
+    func set(callback: @escaping (Bool)->Void) {
+        self.callback = callback
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,10 +27,22 @@ class WalletAddViewController: UIViewController {
 
     @objc func cancel() {
         dismiss(animated: true)
+        
+        if let callback = callback {
+            callback(false)
+        }
     }
     
     @objc func save() {
+        //TODO: Grabar datos reales
+        let wallet = Wallet(name: "Nuevo", balance: 200, currency: .Dollar)
+        WalletsStorage.shared.add(wallet: wallet)
+        
         dismiss(animated: true)
+        
+        if let callback = callback {
+            callback(true)
+        }
     }
 
 }
