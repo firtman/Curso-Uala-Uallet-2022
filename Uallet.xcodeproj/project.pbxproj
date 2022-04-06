@@ -17,6 +17,8 @@
 		C936A55027F4A3C300AEB172 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C936A54F27F4A3C300AEB172 /* MainTabViewController.swift */; };
 		C936A55527F5DF8600AEB172 /* WalletAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C936A55327F5DF8600AEB172 /* WalletAddViewController.swift */; };
 		C936A55627F5DF8600AEB172 /* WalletAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C936A55427F5DF8600AEB172 /* WalletAddViewController.xib */; };
+		C96AD95027FDC2BA00D26FF7 /* WalletBitcoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AD94E27FDC2BA00D26FF7 /* WalletBitcoinCell.swift */; };
+		C96AD95127FDC2BA00D26FF7 /* WalletBitcoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96AD94F27FDC2BA00D26FF7 /* WalletBitcoinCell.xib */; };
 		C996008027F359A400857875 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C996007F27F359A400857875 /* Storage.swift */; };
 		C9DD3C3A27FB214C00E06571 /* Pruebas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C3927FB214C00E06571 /* Pruebas.swift */; };
 		C9DD3C3C27FB399600E06571 /* APICotizaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C3B27FB399600E06571 /* APICotizaciones.swift */; };
@@ -55,6 +57,8 @@
 		C936A54F27F4A3C300AEB172 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		C936A55327F5DF8600AEB172 /* WalletAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletAddViewController.swift; sourceTree = "<group>"; };
 		C936A55427F5DF8600AEB172 /* WalletAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletAddViewController.xib; sourceTree = "<group>"; };
+		C96AD94E27FDC2BA00D26FF7 /* WalletBitcoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletBitcoinCell.swift; sourceTree = "<group>"; };
+		C96AD94F27FDC2BA00D26FF7 /* WalletBitcoinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletBitcoinCell.xib; sourceTree = "<group>"; };
 		C996007F27F359A400857875 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		C9DD3C3927FB214C00E06571 /* Pruebas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pruebas.swift; sourceTree = "<group>"; };
 		C9DD3C3B27FB399600E06571 /* APICotizaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICotizaciones.swift; sourceTree = "<group>"; };
@@ -138,10 +142,19 @@
 				C936A54B27F4A29800AEB172 /* InfoViewController.xib */,
 				C9DD3C4B27FC7F7F00E06571 /* WalletsViewController.swift */,
 				C9DD3C4C27FC7F7F00E06571 /* WalletsViewController.xib */,
-				C9DD3C4F27FC8C8600E06571 /* WalletCell.swift */,
-				C9DD3C5027FC8C8600E06571 /* WalletCell.xib */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C96AD95227FDC2C600D26FF7 /* View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C9DD3C4F27FC8C8600E06571 /* WalletCell.swift */,
+				C9DD3C5027FC8C8600E06571 /* WalletCell.xib */,
+				C96AD94E27FDC2BA00D26FF7 /* WalletBitcoinCell.swift */,
+				C96AD94F27FDC2BA00D26FF7 /* WalletBitcoinCell.xib */,
+			);
+			path = "View Cells";
 			sourceTree = "<group>";
 		};
 		C9DD3C3D27FB39A100E06571 /* APIs */ = {
@@ -188,15 +201,16 @@
 		C9FE8A5427F1E78F00228517 /* Uallet */ = {
 			isa = PBXGroup;
 			children = (
+				C96AD95227FDC2C600D26FF7 /* View Cells */,
 				C9DD3C4227FC712200E06571 /* Modelo */,
 				C936A54127F4986000AEB172 /* Recursos */,
 				C936A54027F4984F00AEB172 /* Utilitarios-Workshop */,
 				C9FE8A5527F1E78F00228517 /* AppDelegate.swift */,
 				C9FE8A5727F1E78F00228517 /* SceneDelegate.swift */,
+				C9DD3C3D27FB39A100E06571 /* APIs */,
 				C936A54E27F4A2AB00AEB172 /* ViewControllers */,
 				C9FE8A6027F1E79000228517 /* LaunchScreen.storyboard */,
 				C9FE8A6327F1E79000228517 /* Info.plist */,
-				C9DD3C3D27FB39A100E06571 /* APIs */,
 			);
 			path = Uallet;
 			sourceTree = "<group>";
@@ -271,6 +285,7 @@
 			files = (
 				C9FE8A6227F1E79000228517 /* LaunchScreen.storyboard in Resources */,
 				C9FE8A5F27F1E79000228517 /* Assets.xcassets in Resources */,
+				C96AD95127FDC2BA00D26FF7 /* WalletBitcoinCell.xib in Resources */,
 				C936A54D27F4A29800AEB172 /* InfoViewController.xib in Resources */,
 				C9FE8A7227F3526100228517 /* HomeViewController.xib in Resources */,
 				C9FE8A5D27F1E78F00228517 /* LoginViewController.storyboard in Resources */,
@@ -331,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96AD95027FDC2BA00D26FF7 /* WalletBitcoinCell.swift in Sources */,
 				C9FE8A7127F3526100228517 /* HomeViewController.swift in Sources */,
 				C9DD3C3A27FB214C00E06571 /* Pruebas.swift in Sources */,
 				C936A54427F4A26C00AEB172 /* DashboardViewController.swift in Sources */,

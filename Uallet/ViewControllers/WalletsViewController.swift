@@ -12,7 +12,8 @@ class WalletsViewController: UITableViewController {
     // - MARK: Inicio
     
     let cellIdentifier = "celdaWallets"
-        
+    let cellBitcoinIdentifier = "celdaWalletsBitcoin"
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,11 +24,15 @@ class WalletsViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addWallet))
         
         
-        // Registrar una celda custom
+        // Registrar una celda custom genérica
         let nib = UINib(nibName: "WalletCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         
-        
+        // Registrar una celda custom para el caso Bitcoin
+        let nibBitcoin = UINib(nibName: "WalletBitcoinCell", bundle: nil)
+        tableView.register(nibBitcoin, forCellReuseIdentifier: cellBitcoinIdentifier)
+
         
     }
     
@@ -56,17 +61,36 @@ class WalletsViewController: UITableViewController {
     }
 
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let wallet = WalletsStorage.shared.wallets[indexPath.row]
+        if wallet.currency == .Bitcoin {
+            return 130
+        } else {
+            return 130
+        }
+    }
+    
     // se ejecuta varias veces, una por cada celda que hay que dibujar
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier,
+        var currentCellIdentifier = cellIdentifier // celda genérica
+        let wallet = WalletsStorage.shared.wallets[indexPath.row]
+        if wallet.currency == .Bitcoin {
+            currentCellIdentifier = cellBitcoinIdentifier // celda de bitcoin
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: currentCellIdentifier,
                                                  for: indexPath) as! WalletCell
         
-        let wallet = WalletsStorage.shared.wallets[indexPath.row]
-        
-        cell.textLabel!.text = wallet.name
-            
+        cell.lblNombre.text = wallet.name
+        cell.lblSaldo.text = "\(wallet.balance)"
+        // Modo 1
+        if let lblMoneda = cell.lblMoneda {
+            lblMoneda.text = wallet.currency.rawValue
+        }
+        // Modo 2
+        cell.lblMoneda?.text = wallet.currency.rawValue
         return cell
     }
 

@@ -8,6 +8,9 @@
 import UIKit
 
 class WalletAddViewController: UIViewController {
+    @IBOutlet weak var lblName: UITextField!
+    @IBOutlet weak var segmentedCurrency: UISegmentedControl!
+    @IBOutlet weak var lblBalance: UITextField!
     
     var callback: ((Bool) -> Void)?
     
@@ -34,8 +37,11 @@ class WalletAddViewController: UIViewController {
     }
     
     @objc func save() {
-        //TODO: Grabar datos reales
-        let wallet = Wallet(name: "Nuevo", balance: 200, currency: .Dollar)
+        let balance = Double(lblBalance.text!) ?? 0
+        
+        let currency = Currency.from(index: segmentedCurrency.selectedSegmentIndex)
+
+        let wallet = Wallet(name: lblName.text!, balance: balance, currency: currency)
         WalletsStorage.shared.add(wallet: wallet)
         
         dismiss(animated: true)

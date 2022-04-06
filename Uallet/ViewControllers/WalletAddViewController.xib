@@ -4,12 +4,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20017"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WalletAddViewController" customModule="Uallet" customModuleProvider="target">
             <connections>
+                <outlet property="lblBalance" destination="X01-eR-En5" id="66V-ZM-63t"/>
+                <outlet property="lblName" destination="iix-31-LtQ" id="30H-s7-6NY"/>
+                <outlet property="segmentedCurrency" destination="6ZT-Ak-iR5" id="AFq-Vm-rhe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +19,72 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="oiO-FI-uGn" userLabel="Stack View Global">
+                    <rect key="frame" x="30" y="54" width="354" height="236.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pqv-ch-fUD" userLabel="Stack View Name">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="62.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fz-qe-I2b" userLabel="Name">
+                                    <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iix-31-LtQ">
+                                    <rect key="frame" x="0.0" y="28.5" width="354" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9NS-mp-Ued" userLabel="Stack View Currency">
+                            <rect key="frame" x="0.0" y="90.5" width="354" height="55.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEJ-vO-Yiu">
+                                    <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6ZT-Ak-iR5">
+                                    <rect key="frame" x="0.0" y="24.5" width="354" height="32"/>
+                                    <segments>
+                                        <segment title="Pesos"/>
+                                        <segment title="Dolar"/>
+                                        <segment title="Bitcoin"/>
+                                    </segments>
+                                </segmentedControl>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hc1-D4-9sS" userLabel="Stack View Balance">
+                            <rect key="frame" x="0.0" y="174" width="354" height="62.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNH-VK-31b">
+                                    <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X01-eR-En5">
+                                    <rect key="frame" x="0.0" y="28.5" width="354" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="139" y="100"/>
+            <color key="backgroundColor" red="0.89537957702020199" green="0.89537957702020199" blue="0.89537957702020199" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oiO-FI-uGn" secondAttribute="trailing" constant="30" id="NGX-fu-iBW"/>
+                <constraint firstItem="oiO-FI-uGn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="bNG-4H-vlo"/>
+                <constraint firstItem="oiO-FI-uGn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="hMG-lm-cu0"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
