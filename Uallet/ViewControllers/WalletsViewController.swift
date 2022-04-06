@@ -16,7 +16,7 @@ class WalletsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
 
@@ -49,6 +49,19 @@ class WalletsViewController: UITableViewController {
         present(UINavigationController(rootViewController: addVC), animated: true)
         
     }
+    
+    // MARK: - Table view delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Apretaste en la fila \(indexPath.row)")
+        
+        let wallet = WalletsStorage.shared.wallets[indexPath.row]
+        
+        let detailsVC = WalletDetailsViewController()
+        detailsVC.wallet = wallet
+        
+        navigationController?.pushViewController(detailsVC, animated: true)
+    }
+
 
     // MARK: - Table view data source
 

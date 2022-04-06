@@ -19,6 +19,8 @@
 		C936A55627F5DF8600AEB172 /* WalletAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C936A55427F5DF8600AEB172 /* WalletAddViewController.xib */; };
 		C96AD95027FDC2BA00D26FF7 /* WalletBitcoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AD94E27FDC2BA00D26FF7 /* WalletBitcoinCell.swift */; };
 		C96AD95127FDC2BA00D26FF7 /* WalletBitcoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96AD94F27FDC2BA00D26FF7 /* WalletBitcoinCell.xib */; };
+		C96AD95527FDE6CC00D26FF7 /* WalletDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AD95327FDE6CC00D26FF7 /* WalletDetailsViewController.swift */; };
+		C96AD95627FDE6CC00D26FF7 /* WalletDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96AD95427FDE6CC00D26FF7 /* WalletDetailsViewController.xib */; };
 		C996008027F359A400857875 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C996007F27F359A400857875 /* Storage.swift */; };
 		C9DD3C3A27FB214C00E06571 /* Pruebas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C3927FB214C00E06571 /* Pruebas.swift */; };
 		C9DD3C3C27FB399600E06571 /* APICotizaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DD3C3B27FB399600E06571 /* APICotizaciones.swift */; };
@@ -59,6 +61,8 @@
 		C936A55427F5DF8600AEB172 /* WalletAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletAddViewController.xib; sourceTree = "<group>"; };
 		C96AD94E27FDC2BA00D26FF7 /* WalletBitcoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletBitcoinCell.swift; sourceTree = "<group>"; };
 		C96AD94F27FDC2BA00D26FF7 /* WalletBitcoinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletBitcoinCell.xib; sourceTree = "<group>"; };
+		C96AD95327FDE6CC00D26FF7 /* WalletDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailsViewController.swift; sourceTree = "<group>"; };
+		C96AD95427FDE6CC00D26FF7 /* WalletDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletDetailsViewController.xib; sourceTree = "<group>"; };
 		C996007F27F359A400857875 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		C9DD3C3927FB214C00E06571 /* Pruebas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pruebas.swift; sourceTree = "<group>"; };
 		C9DD3C3B27FB399600E06571 /* APICotizaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICotizaciones.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				C936A54B27F4A29800AEB172 /* InfoViewController.xib */,
 				C9DD3C4B27FC7F7F00E06571 /* WalletsViewController.swift */,
 				C9DD3C4C27FC7F7F00E06571 /* WalletsViewController.xib */,
+				C96AD95327FDE6CC00D26FF7 /* WalletDetailsViewController.swift */,
+				C96AD95427FDE6CC00D26FF7 /* WalletDetailsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 				C936A54D27F4A29800AEB172 /* InfoViewController.xib in Resources */,
 				C9FE8A7227F3526100228517 /* HomeViewController.xib in Resources */,
 				C9FE8A5D27F1E78F00228517 /* LoginViewController.storyboard in Resources */,
+				C96AD95627FDE6CC00D26FF7 /* WalletDetailsViewController.xib in Resources */,
 				C9DD3C4E27FC7F7F00E06571 /* WalletsViewController.xib in Resources */,
 				C9FE8A6A27F2057200228517 /* logouala.png in Resources */,
 				C936A54527F4A26C00AEB172 /* DashboardViewController.xib in Resources */,
@@ -352,6 +359,7 @@
 				C936A54427F4A26C00AEB172 /* DashboardViewController.swift in Sources */,
 				C9DD3C4127FB407300E06571 /* APICotizacionesPromises.swift in Sources */,
 				C9DD3C5127FC8C8600E06571 /* WalletCell.swift in Sources */,
+				C96AD95527FDE6CC00D26FF7 /* WalletDetailsViewController.swift in Sources */,
 				C9DD3C3F27FB3CE200E06571 /* APIDolarStructs.swift in Sources */,
 				C9DD3C4627FC779A00E06571 /* Wallet.swift in Sources */,
 				C9DD3C4D27FC7F7F00E06571 /* WalletsViewController.swift in Sources */,
