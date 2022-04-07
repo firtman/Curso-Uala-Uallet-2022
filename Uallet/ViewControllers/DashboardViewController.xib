@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashboardViewController" customModule="Uallet" customModuleProvider="target">
             <connections>
+                <outlet property="lblBalance" destination="P6o-Lr-sQe" id="1VM-L4-4X7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,8 +17,31 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fmk-3b-wTJ">
+                    <rect key="frame" x="103" y="414" width="208" height="68"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu saldo total en dólares es" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XU-7A-Zhd">
+                            <rect key="frame" x="0.0" y="0.0" width="208" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6o-Lr-sQe">
+                            <rect key="frame" x="62" y="28.5" width="84" height="39.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.7887665311224652" green="0.79807625515829417" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="Fmk-3b-wTJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2HJ-JZ-zLk"/>
+                <constraint firstItem="Fmk-3b-wTJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="vCk-Qi-9Ll"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="100"/>
         </view>
     </objects>

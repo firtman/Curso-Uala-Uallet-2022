@@ -9,6 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var lblInfo: UILabel!
+    
     @objc func logout() {
         UserDefaults.standard.set(false, forKey: "logueado")
         dismiss(animated: true)
@@ -21,7 +23,16 @@ class HomeViewController: UIViewController {
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log out", style: .plain, target: self, action: #selector(logout))
         
-        // Do any additional setup after loading the view.
+        updateInfo()
+        
+        WalletsStorage.shared.addDataChanged {
+            self.updateInfo()
+        }
+    }
+    
+    
+    func updateInfo() {
+        lblInfo.text = "Hay \(WalletsStorage.shared.wallets.count) wallet(s)"
     }
     
     

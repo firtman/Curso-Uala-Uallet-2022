@@ -33,6 +33,10 @@ class WalletsViewController: UITableViewController {
         let nibBitcoin = UINib(nibName: "WalletBitcoinCell", bundle: nil)
         tableView.register(nibBitcoin, forCellReuseIdentifier: cellBitcoinIdentifier)
 
+        // Registro un listener para cuando los datos cambien
+        WalletsStorage.shared.addDataChanged {
+            self.tableView.reloadData()
+        }
         
     }
     
@@ -41,11 +45,12 @@ class WalletsViewController: UITableViewController {
     
     @objc func addWallet() {
         let addVC = WalletAddViewController()
-        addVC.set { grabo in
-            if grabo {
-                self.tableView.reloadData()
-            }
-        }
+// Lo cambiamos por suscribirnos al modelo en lugar de estar hablando con la vista
+//        addVC.set { grabo in
+//            if grabo {
+//                self.tableView.reloadData()
+//            }
+//        }
         present(UINavigationController(rootViewController: addVC), animated: true)
         
     }

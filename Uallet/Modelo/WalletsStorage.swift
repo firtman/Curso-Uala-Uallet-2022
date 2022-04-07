@@ -6,13 +6,20 @@
 //
 
 import Foundation
+import PromiseKit
 
 class WalletsStorage {
     static var shared = WalletsStorage()     // Singleton
     let KEY_WALLET = "wallets_json"
     var wallets: [Wallet] = []
     
+    private var listeners: [()->Void] = []
+    
     init() { load() }
+    
+    func addDataChanged(listener: @escaping ()->Void) {
+        listeners.append(listener)
+    }
     
     func save() {
         let encoder = JSONEncoder()
@@ -34,11 +41,42 @@ class WalletsStorage {
             }
         }
     }
+    
+    func notifyUpdates() {
+        // Hubo cambios en los datos
+        save()
+        // recorro todos los listeners y los invoco
+        for listener in listeners {
+            listener()
+        }
+    }
 
     func add(wallet: Wallet) {
         wallets.append(wallet)
-        save()
+        notifyUpdates()
     }
     
+    func delete(wallet: Wallet) {
+        wallets.removeAll { currentWallet in
+            return currentWallet == wallet
+        }
+        notifyUpdates()
+    }
+    
+    func editBalance(wallet: Wallet, balance: Double) {
+        // versión imperativa
+        for (i, currentWallet) in wallets.enumerated() {
+            if currentWallet == wallet {
+                wallets[i].balance = balance
+            }
+        }
+        notifyUpdates()
+    }
+    
+    func walletsPromise() -> Promise<[Wallet]> {
+        return Promise { resolver in
+            resolver.fulfill(self.wallets)
+        }
+    }
     
 }
